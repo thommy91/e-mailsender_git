@@ -6,7 +6,7 @@ from email.mime.application import MIMEApplication
 smtp_server = 'smtp.gmail.com'
 smtp_port = 587
 #Replace with your own gmail account
-gmail = 'thomas91code@gmail.com'
+gmail = 'sender@gmail.com'
 password = '???????????'
 
 message = MIMEMultipart('mixed')
@@ -38,7 +38,7 @@ with smtplib.SMTP(smtp_server, smtp_port) as server:
 	server.login(gmail, password)
 	server.sendmail(gmail, 
 				#to.split(";") + (cc.split(";") if cc else []),
-                "thomas_aj_9@hotmail.com",
+                "receiver@hotmail.com",
 				msg_full)
 	server.quit()
 
